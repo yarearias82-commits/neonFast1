@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonFest</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="encabezado">
+    <nav class="navbar">
+
+        <h1 class="logo">NeonFest</h1>
+
+        <button class="btn-menu" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <ul class="menu" id="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#boletos">Boletos</a></li>
+            <li><a href="#registro">Registro</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-texto">
+
+        <span class="etiqueta">Festival 2026</span>
+
+        <h2>
+            Vive la experiencia más increíble
+        </h2>
+
+        <p>
+            Música, arte, comida y diversión en un solo lugar.
+        </p>
+
+        <button onclick="mostrarPromo()">
+            Ver promoción
+        </button>
+
+    </div>
+
+    <div class="hero-imagen">
+        <img src="img/portada.jpg" alt="Festival">
+    </div>
+
+</section>
+
+<section class="seccion" id="eventos">
+
+    <h2>Eventos</h2>
+
+    <p class="descripcion">
+        Disfruta de nuestras actividades principales.
+    </p>
+
+    <div class="contenedor-tarjetas">
+
+        <div class="tarjeta">
+            <img src="img/musica.jpg" alt="Música">
+
+            <div class="tarjeta-info">
+                <h3>Música en Vivo</h3>
+
+                <p>
+                    Bandas nacionales e internacionales.
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/comida.jpg" alt="Comida">
+
+            <div class="tarjeta-info">
+                <h3>Zona Gastronómica</h3>
+
+                <p>
+                    Los mejores platillos y bebidas.
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/arte.jpg" alt="Arte">
+
+            <div class="tarjeta-info">
+                <h3>Arte y Cultura</h3>
+
+                <p>
+                    Exposiciones y talleres interactivos.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="seccion boletos" id="boletos">
+
+    <h2>Boletos</h2>
+
+    <div class="planes">
+
+        <div class="plan">
+            <h3>Básico</h3>
+
+            <div class="precio">$500</div>
+
+            <p>Acceso general</p>
+
+            <button onclick="seleccionarBoleto('Básico')">
+                Elegir
+            </button>
+        </div>
+
+        <div class="plan destacado">
+            <h3>VIP</h3>
+
+            <div class="precio">$1200</div>
+
+            <p>Zona exclusiva y regalos</p>
+
+            <button onclick="seleccionarBoleto('VIP')">
+                Elegir
+            </button>
+        </div>
+
+        <div class="plan">
+            <h3>Premium</h3>
+
+            <div class="precio">$2000</div>
+
+            <p>Acceso total y backstage</p>
+
+            <button onclick="seleccionarBoleto('Premium')">
+                Elegir
+            </button>
+        </div>
+
+    </div>
+
+    <p id="boletoSeleccionado"></p>
+
+</section>
+
+<section class="seccion registro" id="registro">
+
+    <h2>Registro</h2>
+
+    <form class="formulario">
+
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+
+        <label>Correo</label>
+        <input type="email" id="correo">
+
+        <label>Tipo de boleto</label>
+        <select id="tipo">
+            <option>Básico</option>
+            <option>VIP</option>
+            <option>Premium</option>
+        </select>
+
+        <button type="button" onclick="enviarFormulario()">
+            Registrarse
+        </button>
+
+    </form>
+
+    <p id="respuesta"></p>
+
+</section>
+
+<footer>
+    <p>NeonFest 2026 - Todos los derechos reservados</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+  </html>
