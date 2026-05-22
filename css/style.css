@@ -1,0 +1,186 @@
+/* CONFIGURACIÓN GENERAL */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#10002b;
+    color:white;
+}
+
+/* ENCABEZADO */
+.encabezado{
+    background:rgba(16,0,43,0.95);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    color:#00f5ff;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu a:hover{
+    color:#00f5ff;
+}
+
+/* BOTÓN MENÚ */
+.btn-menu{
+    display:none;
+}
+
+/* HERO */
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.hero-texto h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero-texto p{
+    margin-bottom:25px;
+}
+
+.hero-imagen img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* BOTONES */
+button{
+    background:#ff00cc;
+    color:white;
+    border:none;
+    padding:14px 26px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+/* TARJETAS */
+.contenedor-tarjetas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.tarjeta{
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.tarjeta img{
+    width:100%;
+}
+
+.tarjeta-info{
+    padding:20px;
+}
+
+/* PLANES */
+.planes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.plan{
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.precio{
+    font-size:40px;
+    color:#ff00cc;
+}
+
+/* FORMULARIO */
+.formulario{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.formulario input,
+.formulario select{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .contenedor-tarjetas,
+    .planes{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .btn-menu{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+        flex-direction:column;
+    }
+
+    .menu.activo{
+        display:flex;
+    }
+}
